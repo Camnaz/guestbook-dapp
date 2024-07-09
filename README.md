@@ -32,6 +32,9 @@ npx hardhat
 
 Select "Create a Javascript Project" and "no" for installing the project's sample dependencies.
 
+We will now open up our newly created hardhat project in a code editor, for this guide, we will be using Visual Studio Code.
+navigate to the root of your directory in the terminal and type `code .` and hit enter
+
 ## 4. Create secret.json File
 Create a secret.json file in the root directory of your project to store your private key securely. Replace YOUR_PRIVATE_KEY with your actual private key.
 
