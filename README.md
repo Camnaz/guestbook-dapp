@@ -30,7 +30,7 @@ Initialize a new Hardhat project:
 npx hardhat
 ```
 
-Select "Create an empty hardhat.config.js" and "no" for installing the project's sample dependencies.
+Select "Create a Javascript Project" and "no" for installing the project's sample dependencies.
 
 ## 4. Create secret.json File
 Create a secret.json file in the root directory of your project to store your private key securely. Replace YOUR_PRIVATE_KEY with your actual private key.
