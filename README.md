@@ -14,6 +14,8 @@ mkdir guestbook-dapp
 cd guestbook-dapp
 npm init --yes
 ```
+<img width="1512" alt="gdscreenshot1" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/10da1acb-f824-4014-a058-fa4e85d6515f">
+
 
 ## 2. Install Dependencies
 Install Hardhat and other necessary dependencies:
@@ -23,12 +25,17 @@ npm install --save-dev hardhat
 npm install --save-dev chai @nomiclabs/hardhat-waffle
 npm install react react-dom
 ```
+
+<img width="1512" alt="gdscreenshot2" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/36812823-d36d-4c65-9ff2-700d5010edad">
+
 3. Set Up Hardhat
 Initialize a new Hardhat project:
 
 ```
 npx hardhat
 ```
+
+<img width="1512" alt="gdscreenshot3" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/9e95a66e-16eb-475f-8036-ba43385f6272">
 
 Select "Create a Javascript Project" and "no" for installing the project's sample dependencies.
 
@@ -42,8 +49,15 @@ Create a secret.json file in the root directory of your project to store your pr
   "PrivateKey": "YOUR_PRIVATE_KEY"
 }
 
+<img width="1512" alt="gdscreenshot5" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/3b6b1921-e5c0-471c-ae7e-d4cad79f7fa0">
+
+
+> [Refer to this guide](https://support.metamask.io/managing-my-wallet/secret-recovery-phrase-and-private-keys/how-to-export-an-accounts-private-key/) for instructions on how to export your account's private key via Metamask.
+
 ## 5. Update hardhat.config.js
 Replace the contents of hardhat.config.js with the following configuration:
+
+Ensure that the network settings are configured correctly for [Core Testnet](https://docs.coredao.org/docs/Dev-Guide/contract-verify#hardhat-verification)
 
 ```
 require('@nomiclabs/hardhat-ethers');
@@ -64,7 +78,7 @@ module.exports = {
   solidity: {
     compilers: [
       {
-        version: '0.8.24',
+        version: '0.8.9',
         settings: {
           evmVersion: 'paris',
           optimizer: {
@@ -85,10 +99,14 @@ module.exports = {
   },
 };
 ```
+<img width="1512" alt="gdscreenshot5 1" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/d78ae0d4-c9dc-4ba0-9e96-99c38c0a7c89">
+
 
 ## Writing the Smart Contract
 1. Create the Guestbook Smart Contract
-Create a file contracts/Guestbook.sol with the following content:
+
+Delete the `lock.sol` file in `Contracts`
+Create a file `contracts/Guestbook.sol` with the following content:
 
 ```
 // SPDX-License-Identifier: GPL-3.0
@@ -112,6 +130,8 @@ contract Guestbook {
     }
 }
 ```
+<img width="1512" alt="gdscreenshot6" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/61243ee5-8e24-4dd2-97fb-7e5bb301f220">
+
 
 ## Deploying the Smart Contract
 1. Create Deployment Script
