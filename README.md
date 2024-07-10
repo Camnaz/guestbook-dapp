@@ -156,12 +156,18 @@ main().catch((error) => {
 });
 ```
 
+<img width="1512" alt="gdscreenshot7" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/7520ccdc-c78d-4e14-8fc8-5c2d6d619573">
+
+
 2. Deploy the Contract
 Deploy the contract to the Core network:
 
 ```
 npx hardhat run scripts/deploy.js --network testnet
 ```
+
+<img width="1512" alt="gdscreenshot8" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/67c484f2-fd49-4bca-8688-f35be8361839">
+
 
 ## Setting Up the React Frontend
 1. Create the React App
@@ -172,6 +178,9 @@ npx create-react-app frontend
 cd frontend
 ```
 
+<img width="1512" alt="gdscreenshot9" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/31cfed96-9abf-4d2e-8bda-1fa2a8f1efa3">
+
+
 2. Install Ethers.js
 Install the Ethers.js library:
 
@@ -179,10 +188,18 @@ Install the Ethers.js library:
 npm install ethers
 ```
 
+<img width="1512" alt="gdscreenshot10" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/02027836-e117-4b1c-8324-e81194277b83">
+
+
 3. Add GuestbookAbi.json
 Copy the Guestbook.json file from artifacts/contracts/Guestbook.sol/ to the frontend/src directory and rename it to GuestbookAbi.json.
 
-4. Update src/App.js
+<img width="1512" alt="gdscreenshot11" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/1bf2a0c9-647c-49b9-90b5-011c354e2484">
+
+<img width="1512" alt="gdscreenshot12" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/b6f4e0e2-e31b-4495-9738-f94586ee14e2">
+
+
+5. Update frontend/src/App.js
 Create or update the src/App.js file with the following content:
 
 ```
@@ -277,31 +294,21 @@ function App() {
 
 export default App;
 ```
+<img width="1512" alt="gdscreenshot13" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/e656f122-9cf5-4635-b28b-30d4b09cdb0b">
 
-Running the React App
 Start the React app:
+
+>Ensure you are in /frontend within your repository (`cd frontend`)
 
 ```
 npm start
 ```
+You will be redirected to the development server
+
+<img width="1512" alt="gdscreenshot14" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/c74e0b38-4c86-4af9-bfa2-f3aa9b9b52b3">
 
 ## Conclusion
 By following these steps, you should have a basic decentralized guestbook application deployed on the Core network with a React frontend to interact with it. Ensure you replace placeholders like YOUR_CONTRACT_ADDRESS with actual values from your deployment.
-
-```
-git init
-```
-
-2. Add All Files:
-
-```
-git add .
-```
-
-3. Commit Changes
-
-
-
 
 
 
