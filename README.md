@@ -2,7 +2,34 @@
 
 ## Overview
 
-This guide will walk you through creating a decentralized guestbook application using Hardhat for development, Solidity for smart contracts, and React for the frontend. This setup will be tailored for the Core network.
+This guide will walk you through creating a decentralized guestbook application using Hardhat for development, Solidity for smart contracts, and React for the frontend. This setup is tailored for the Core network.
+
+By following this tutorial, you'll learn how to:
+
+- Develop and deploy smart contracts on the Core Testnet.
+- Build a React frontend to interact with your smart contracts.
+- Integrate MetaMask for secure user interactions and transactions.
+
+## Why Use This Boilerplate?
+
+- **Decentralization**: Store guestbook entries on the blockchain, ensuring data integrity and transparency.
+- **Security**: Immutable and tamper-proof records stored on the blockchain.
+- **Transparency**: All entries and transactions are publicly visible and verifiable.
+- **Real-World Applications**: Ideal for creating transparent feedback systems, community engagement tools, or personal guestbooks.
+
+## Prerequisites
+
+Before getting started, ensure you have the following:
+
+- **Node.js**: Install Node.js from [nodejs.org](https://nodejs.org/).
+- **npm**: Node.js includes npm (Node Package Manager).
+- **MetaMask**: Install the MetaMask browser extension from [metamask.io](https://metamask.io/).
+- **Core Testnet Configuration**: Configure MetaMask to connect to the Core Testnet.
+  - **Network Name**: Core Testnet
+  - **New RPC URL**: `https://rpc.test.btcs.network`
+  - **Chain ID**: `1115`
+  - **Currency Symbol**: `CORE`
+- **Text Editor**: Use a text editor like Visual Studio Code.
 
 ## Project Setup
 
@@ -194,6 +221,8 @@ npm install ethers
 3. Add GuestbookAbi.json
 Copy the Guestbook.json file from artifacts/contracts/Guestbook.sol/ to the frontend/src directory and rename it to GuestbookAbi.json.
 
+Ensure you replace placeholders like `YOUR_CONTRACT_ADDRESS` with actual values from your deployment.
+
 <img width="1512" alt="gdscreenshot11" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/1bf2a0c9-647c-49b9-90b5-011c354e2484">
 
 <img width="1512" alt="gdscreenshot12" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/b6f4e0e2-e31b-4495-9738-f94586ee14e2">
@@ -307,8 +336,29 @@ You will be redirected to the development server
 
 <img width="1512" alt="gdscreenshot14" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/c74e0b38-4c86-4af9-bfa2-f3aa9b9b52b3">
 
-## Conclusion
-By following these steps, you should have a basic decentralized guestbook application deployed on the Core network with a React frontend to interact with it. Ensure you replace placeholders like YOUR_CONTRACT_ADDRESS with actual values from your deployment.
+> In this example, we've already submitted our response, so we will navigate to the [Core Explorer](scan.coredao.org).
 
+Here you can see, the transaction has been submitted successfully.
+
+<img width="1512" alt="gdscreenshot16" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/c07daf36-b48e-4e69-9e29-ab367fec2764">
+
+The dapp webpage will update, and you will notice the feed on the UI has been updated with your your name and message.
+
+<img width="1512" alt="gdscreenshot15" src="https://github.com/Camnaz/guestbook-dapp/assets/32852637/97167eff-e307-41af-9d87-42ea1ea0b57d">
+
+## Deploying the Frontend
+If you want your DApp to be accessible even when your local server is not running, consider deploying your frontend to a hosting service. Here are some common options:
+
+GitHub Pages: Free hosting for static sites directly from your GitHub repository.
+Netlify: A popular choice for deploying static sites with easy CI/CD integration.
+Vercel: Another popular choice, especially for React applications.
+AWS S3 + CloudFront: For more control over hosting and scaling.
+
+By deploying your frontend to one of these services, users can access your DApp from anywhere without needing your local development server to be running.
+
+## Conclusion
+By following these steps, you should have a basic decentralized guestbook application deployed on the Core Test network with a React frontend to interact with it. 
+
+You can clone this repository to use as a boilerplate, or an educational resource.
 
 
