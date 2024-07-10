@@ -1,4 +1,4 @@
-# Guestbook dApp
+# Guestbook dApp Tutorial / Boilerplate
 
 ## Overview
 
