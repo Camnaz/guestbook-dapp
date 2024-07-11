@@ -30,6 +30,7 @@ Before getting started, ensure you have the following:
   - **Chain ID**: `1115`
   - **Currency Symbol**: `CORE`
 - **Text Editor**: Use a text editor like Visual Studio Code.
+- **Core Faucet**: To get test CORE tokens for transactions, visit the [Core Faucet](https://scan.test.btcs.network/faucet) and refer to the [instructions for use](https://docs.coredao.org/docs/Dev-Guide/core-faucet).
 
 ## Project Setup
 
@@ -81,7 +82,36 @@ Create a secret.json file in the root directory of your project to store your pr
 
 > [Refer to this guide](https://support.metamask.io/managing-my-wallet/secret-recovery-phrase-and-private-keys/how-to-export-an-accounts-private-key/) for instructions on how to export your account's private key via Metamask.
 
-## 5. Update hardhat.config.js
+## 5. Update .gitignore File
+Update your .gitignore file to ensure that your secret.json file and other sensitive files are not committed to version control.
+
+Create or update the .gitignore file in your root directory with the following content:
+
+```
+# Node.js dependencies
+/node_modules
+
+# Hardhat artifacts
+/artifacts
+/cache
+
+# Environment and secret files
+.env
+.secret.json
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore build output
+/build
+
+# Miscellaneous
+.DS_Store
+```
+
+## 6. Update hardhat.config.js
 Replace the contents of hardhat.config.js with the following configuration:
 
 Ensure that the network settings are configured correctly for [Core Testnet](https://docs.coredao.org/docs/Dev-Guide/contract-verify#hardhat-verification)
